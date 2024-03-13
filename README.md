@@ -3,7 +3,7 @@ A model for classifying whether an image is meme or not
 
 # Problem Statement
 ```
-#### Assignment
+Assignment
 
 Please find the assignment below. <br>
 Build a model to classify whether an image is meme or not <br>
