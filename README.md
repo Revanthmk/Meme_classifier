@@ -5,15 +5,15 @@ A model for classifying whether an image is meme or not
 ```
 Assignment
 
-Please find the assignment below. <br>
-Build a model to classify whether an image is meme or not <br>
-You are free to <br>
-● Use any open source libraries, if required <br>
-● Use publicly available datasets to train the model <br>
-● Use any programming language, but python is preferred <br>
+Please find the assignment below.
+Build a model to classify whether an image is meme or not
+You are free to
+● Use any open source libraries, if required
+● Use publicly available datasets to train the model
+● Use any programming language, but python is preferred
 
-You are expected to <br>
-● Provide evaluation and performance metrics for your model <br>
-● Create a readme file with instructions on how to run the test cases <br>
-● Upload your code on GitHub and email repo link to amrit@neuralhq.ai <br>
+You are expected to
+● Provide evaluation and performance metrics for your model
+● Create a readme file with instructions on how to run the test cases
+● Upload your code on GitHub and email repo link to #########
 ```
