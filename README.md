@@ -53,18 +53,18 @@ We can't use this dataset because it is too similar to non-meme images.
 ```
 This dataset contains 10,000 images of memes.
 Initial inspection of the dataset seems promising, the dataset contains memes in the traditional sense conatining image over text in most of the data points.
-We are going on with this dataset
+We are going on with this dataset.
 ```
 
 # Downloading the dataset
 We can download and unzip the dataset from Kaggle using kaggle-api
 ```
-!mkdir ~/.kaggle
-!cp kaggle.json ~/.kaggle/
-!chmod 600 ~/.kaggle/kaggle.json
-!pip install -q kaggle
-!kaggle datasets download -d parthplc/facebook-hateful-meme-dataset
-!unzip 'facebook-hateful-meme-dataset.zip' -d 'data/'
+mkdir ~/.kaggle
+cp kaggle.json ~/.kaggle/
+chmod 600 ~/.kaggle/kaggle.json
+pip install -q kaggle
+kaggle datasets download -d parthplc/facebook-hateful-meme-dataset
+unzip 'facebook-hateful-meme-dataset.zip' -d 'data/'
 ```
 
 
