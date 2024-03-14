@@ -125,7 +125,6 @@ Building a benchmark CNN model to
 ```
 ### a) Architecture
 ![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/15cf4708-a27a-4666-ab25-188e1acaab91)
-
 ### b) Evaluation  
 ```
 - Evaluation of this model doesn't make any sense because we are training a classification architecture model with just one class
@@ -168,7 +167,6 @@ Building a benchmark CNN model to
 ```
 ### a) Architecture
 ![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/476bd836-7482-49b7-8f3d-7fb22f504ec4)
-
 ### b) Evaluation
 ![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/385ee5f1-23aa-4bfa-8673-ba8758701a82)
 ![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/8b2d4c25-6bf2-466f-a1c2-38d42f19fa90)
@@ -180,7 +178,6 @@ Building a benchmark CNN model to
 - Precision for class 0 is 0.75 and for that of class 1 is 0.
 - With the 2 above statements and given that we have 75% of our total data as training data, we can conclude that the model is predicting every image as class 0.
 ```
-
 # 12) ResNet 50 (transfer learning)
 ```
 - Looking at the amount of data we have, transfer learning will be the best approach instead of training the CNN from scratch.
@@ -195,7 +192,6 @@ Building a benchmark CNN model to
 ```
 ### a) Architecture
 ![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/17f80cf4-0ede-45bd-9679-6ecac238c67b)
-
 ### b) Evaluation
 ![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/85d37596-7451-4c7c-ac30-0c4b5885b00b)
 ![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/b03a4bed-1178-4acd-a60d-c0bec6bcaa0d)
@@ -221,7 +217,6 @@ Building a benchmark CNN model to
 ### b) Evaluation
 ![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/c3b98d65-4953-4f59-8e0c-04345b69a0f7)
 ![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/f2b6f358-731c-4d6e-9689-78f8443e317d)
-
 ### c) Observation
 ```
 - The validation accuracy of the model is 66%
