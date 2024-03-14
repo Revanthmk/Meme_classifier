@@ -18,6 +18,9 @@ You are expected to
 ● Upload your code on GitHub and email repo link to #########
 ```
 # 3) Files
+process.md
+> MD file explaining the whole process of the project
+> 
 noyoto.ipynb 
 > Contains the whole process of data selection, data exploration, image augmentation, benchmark model training, final model training, model evaluation, model inference, exporting the model.
 >
@@ -27,10 +30,10 @@ final101_2classes.h5
 inference.py
 > Inference script
 >
-meme.jpg
+meme.zip
 > Sample inference image of class 0
 >
-non_meme.jpg
+non_meme.zip
 > Sample inference image of class 1
 >
 # 4) Dataset Selection
@@ -213,10 +216,10 @@ Building a benchmark CNN model to
 - The only problem we might face using a deeper model is overfitting, but that is resolved by our extensive image augmentation methods, regularization techniques like Batch Normalization layers.
 ```
 ### a) Architecture
---------------------------------------------------------------------------------------------------
+![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/5760a66f-a7e7-4257-8670-72e2ca469a17)
 ### b) Evaluation
-![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/c3b98d65-4953-4f59-8e0c-04345b69a0f7)
-![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/f2b6f358-731c-4d6e-9689-78f8443e317d)
+![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/0ad9ff86-6592-44f4-acb2-df724508cfbb)
+![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/ca7a95da-1248-493e-b196-bd024806834c)
 ### c) Observation
 ```
 - The validation accuracy of the model is 66%
