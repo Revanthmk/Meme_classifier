@@ -55,7 +55,7 @@ Note that the dependencies mentioned here and in the requirements.txt file are o
 - Run the inference.py file.
 - Results will be created in the 'inf_output' directory.
 - Wait till the inference is completed.
-- You can find the output in 'inf_output' directory containing the same images with additional subtext displayed on the top-left indication whether the image is classified as 'meme' or 'non=meme'.
+- You can find the output in 'inf_output' directory containing the same images with additional subtext displayed on the top-left indication whether the image is classified as 'meme' or 'non-meme'.
 ```
 # 6) Model Performance
 ![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/0ad9ff86-6592-44f4-acb2-df724508cfbb)
