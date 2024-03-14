@@ -226,9 +226,9 @@ Building a benchmark CNN model to
 ### c) Observation
 ```
 - The validation accuracy of the model is 66%
-- Recall for class 0 is 0.82 and for that of class 1 is 0.19.
-- Precision for class 0 is 0.75 and for that of class 1 is 0.26.
-- F1 score for class 0 is 0.78 and for that of class 1 is 0.22.
+- Recall for class 0 is 0.81 and for that of class 1 is 0.19.
+- Precision for class 0 is 0.75 and for that of class 1 is 0.25.
+- F1 score for class 0 is 0.78 and for that of class 1 is 0.21.
 - The model seems to do better than our previous models in the class 0 but fails in class 1, which can again be because of the number of epochs the model is trained on.
 - The reason for the model performing significantly better in one class might be because of the class imbalance, the next step would be the add more data points to class 1
 ```
