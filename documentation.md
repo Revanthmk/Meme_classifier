@@ -1,4 +1,4 @@
-# 1) Noyoto_meme_classifier
+# 1) Meme_classifier
 A model for classifying whether an image is meme or not
 
 # 2) Problem Statement
