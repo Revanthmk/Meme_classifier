@@ -1,7 +1,7 @@
-# Noyoto_meme_classifier
+# 1) Noyoto_meme_classifier
 A model for classifying whether an image is meme or not
 
-# Problem Statement
+# 2) Problem Statement
 ```
 Assignment
 
@@ -17,7 +17,7 @@ You are expected to
 ● Create a readme file with instructions on how to run the test cases
 ● Upload your code on GitHub and email repo link to #########
 ```
-# Files
+# 3) Files
 noyoto.ipynb 
 > Contains the whole process of data selection, data exploration, image augmentation, benchmark model training, final model training, model evaluation, model inference, exporting the model.
 >
@@ -33,10 +33,10 @@ meme.jpg
 non_meme.jpg
 > Sample inference image of class 1
 >
-# Dataset Selection
+# 4) Dataset Selection
 The problem statement requires a dataset of images containing memes.
-## Discovered datasets
-### sayangoswami/reddit-memes-dataset
+## a) Discovered datasets
+### i) sayangoswami/reddit-memes-dataset
 ```
 This dataset contains 3326 memes.
 Initial inspection of the dataset doesn't look good,
@@ -46,13 +46,13 @@ the dataset contains memes but most of the memes are just funny images like
 > Google screenshot of a potato.
 We can't use this dataset because it is too similar to non-meme images.
 ```
-### parthplc/facebook-hateful-meme-dataset
+### ii) parthplc/facebook-hateful-meme-dataset
 ```
 This dataset contains 10,000 images of memes.
 Initial inspection of the dataset seems promising, the dataset contains memes in the traditional sense conatining image over text in most of the data points.
 We are going on with this dataset.
 ```
-# Downloading the dataset
+# 5) Downloading the dataset
 We can download and unzip the dataset from Kaggle using kaggle-api
 ```
 mkdir ~/.kaggle
@@ -62,19 +62,19 @@ pip install -q kaggle
 kaggle datasets download -d parthplc/facebook-hateful-meme-dataset
 unzip 'facebook-hateful-meme-dataset.zip' -d 'data/'
 ```
-# Data Analysis
+# 6) Data Analysis
 ```
 The dataset has 10,000 data points.
 Each data point is an image and a corresponding json file containing the text in the image.
 We are going to ignore the text in the json file and only going to work with the image hence to generalize the model to work on any meme, and not overfit(in this specific usecase) to hateful memes.
 ```
-# Visualizing the Dataset
+# 7) Visualizing the Dataset
 ```
 Example data point : ![01264](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/a26c44d2-2f3d-47db-9771-c62a3c4a1bbb)
 The data contains images mostly of this format, image with embedded text.
 Which corresponds to a meme in general.
 ```
-# Data Preprocessing
+# 8) Data Preprocessing
 ```
 We are using the following preprocessing steps.
 Hyperparameter selection for each of these preprocessing methods are explained in the noyoto.ipynb notebook with examples
@@ -117,38 +117,38 @@ Hyperparameter selection for each of these preprocessing methods are explained i
 13) Rescale : 1./255
     - rescaling for avoiding vanishing gradients or gradient explosions and reduced memory requirements.
 ```
-# Benchmark CNN
+# 9) Benchmark CNN
 ```
 Building a benchmark CNN model to
 - Checking if everything else except the model architecture works as expected syntactically
 - Establishing a baseline performance
 ```
-### Architecture
+### a) Architecture
 ![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/15cf4708-a27a-4666-ab25-188e1acaab91)
 
-### Evaluation  
+### b) Evaluation  
 ```
 - Evaluation of this model doesn't make any sense because we are training a classification architecture model with just one class
 ```
-### Observation
+### c) Observation
 ```
 - The dataset has only 1 class and is more suitable for anomaly detection models like Autoencoders, but the problem statement mentioned to build a classification model
 - So the next step is to find a dataset with 2 classes, one with meme and one without memes.
 - Going back to dataset selection process again
 ```
-# Dataset Selection
+# 10) Dataset Selection
 ```
 Couldn't find any dataset with this specific requirements with 2 classes.
 Next step will be to build a dataset.
 ```
-## Building the Dataset
+## a) Building the Dataset
 ```
 - We need 2 classes memes and non-memes.
 - We already have 10,000 images of memes.
 - Should look for non-meme images.
 - Best source of non-meme images will be the ImageNet dataset.
 ```
-#### Building non-meme class
+#### i) Building non-meme class
 ```
 - We need a second non-meme class to build a classification model,
 Decided to choose famous 10 classes from the ImageNet dataset and choose 30 images from each class and tag it as non-meme class
@@ -160,19 +160,19 @@ There are few different methods we can create the dataset.
 5) Same preprocessing steps are followed for this dataset.
 6) Now again training to the benchmark model with this new dataset.
 ```
-# Benchmark CNN
+# 11) Benchmark CNN
 ```
 Building a benchmark CNN model to
 - Checking if everything else except the model architecture works as expected syntactically
 - Establishing a baseline performance
 ```
-### Architecture
+### a) Architecture
 ![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/476bd836-7482-49b7-8f3d-7fb22f504ec4)
 
-### Evaluation
+### b) Evaluation
 ![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/385ee5f1-23aa-4bfa-8673-ba8758701a82)
 ![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/8b2d4c25-6bf2-466f-a1c2-38d42f19fa90)
-### Observation
+### c) Observation
 ```
 - We have trained the model only for 5 epochs because of restrictions in GPU resources.
 - The Validation accuracy of the model is 75%.
@@ -181,7 +181,7 @@ Building a benchmark CNN model to
 - With the 2 above statements and given that we have 75% of our total data as training data, we can conclude that the model is predicting every image as class 0.
 ```
 
-# ResNet 50 (transfer learning)
+# 12) ResNet 50 (transfer learning)
 ```
 - Looking at the amount of data we have, transfer learning will be the best approach instead of training the CNN from scratch.
 - Going with ResNet pretrained with ImageNet dataset and training the model with transfer learning.
@@ -193,13 +193,13 @@ Building a benchmark CNN model to
   5) Adding a GlobalAveragePooling layer, Dense layer with 128 neurons, BatchNormalization layer and finally the output layer with 2 neurons for our 2 classes.
   6) Excluded the Dropout layer because BatchNormalization provides the same regularization as Dropout.
 ```
-### Architecture
+### a) Architecture
 ![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/17f80cf4-0ede-45bd-9679-6ecac238c67b)
 
-### Evaluation
+### b) Evaluation
 ![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/85d37596-7451-4c7c-ac30-0c4b5885b00b)
 ![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/b03a4bed-1178-4acd-a60d-c0bec6bcaa0d)
-### Observation
+### c) Observation
 ```
 - We have trained the model only for 5 epochs because of restrictions in GPU resources.
 - The validation accuracy of the model is 61%.
@@ -209,20 +209,20 @@ Building a benchmark CNN model to
 - The model performs reasonably well for the class 0 and poor for class 1.
 - The above result is expected because we trained our model only for 5 epochs which is too low for any problem statement.
 ```
-# ResNet 101 (transfer learning)
+# 13) ResNet 101 (transfer learning)
 ```
 - All the above points for ResNet 50 would also go for ResNet 101.
 - Trying out 101 layer model will lead to better accuracy at the expence of inference speed and training speed.
 - The problem statement didn't mention any restrictions on the inference speed or any cap in the training resource, so there is not many reasons against using ResNet 101 when we get better accuracies out of the model.
 - The only problem we might face using a deeper model is overfitting, but that is resolved by our extensive image augmentation methods, regularization techniques like Batch Normalization layers.
 ```
-### Architecture
+### a) Architecture
 --------------------------------------------------------------------------------------------------
-### Evaluation
+### b) Evaluation
 ![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/c3b98d65-4953-4f59-8e0c-04345b69a0f7)
 ![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/f2b6f358-731c-4d6e-9689-78f8443e317d)
 
-### Observation
+### c) Observation
 ```
 - The validation accuracy of the model is 66%
 - Recall for class 0 is 0.82 and for that of class 1 is 0.19.
@@ -231,7 +231,7 @@ Building a benchmark CNN model to
 - The model seems to do better than our previous models in the class 0 but fails in class 1, which can again be because of the number of epochs the model is trained on.
 - The reason for the model performing significantly better in one class might be because of the class imbalance, the next step would be the add more data points to class 1
 ```
-# Improvements
+# 14) Improvements
 ```
 - The main and most important improvement which can be done to the model is training the model for multiple more number of epochs.
 - Adding more data to the non-meme class to match the meme class should balance the dataset.
