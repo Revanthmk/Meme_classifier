@@ -27,10 +27,10 @@ final101_2classes.h5
 inference.py
 > Inference script
 >
-meme.jpg
+inf_input/meme.jpg
 > Sample inference image of class 0
 >
-non_meme.jpg
+inf_input/non_meme.jpg
 > Sample inference image of class 1
 >
 requirements.txt
