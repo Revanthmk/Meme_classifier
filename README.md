@@ -21,7 +21,7 @@ You are expected to
 documentation.md
 > MD file explaining the whole process of the project
 >
-noyoto.ipynb 
+niyoto.ipynb 
 > Contains the whole process of data selection, data exploration, image augmentation, benchmark model training, final model training, model evaluation, model inference, exporting the model.
 >
 final101_2classes.h5
