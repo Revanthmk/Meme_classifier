@@ -50,7 +50,8 @@ Note that the dependencies mentioned here and in the requirements.txt file are o
 # 5) Run Inference
 ```
 - Download the model from https://drive.google.com/file/d/1M9sehJ9fiLrRCa-2zeExvhElcCZPx6tr/view?usp=sharing (Model size too big for GitHub)
-- pip install -r requirements.txt
+- Place the model in the main working directory.
+- pip install -r requirements.txt.
 - Upload the inference images in 'inf_input' directory.
 - Install the python dependencies from requirements.txt
 - Run the inference.py file.
