@@ -36,6 +36,9 @@ meme.zip
 non_meme.zip
 > Sample inference image of class 1
 >
+requirements.txt
+> Requirements file to run to get all the python dependencies
+>
 # 4) Dataset Selection
 The problem statement requires a dataset of images containing memes.
 ## a) Discovered datasets
