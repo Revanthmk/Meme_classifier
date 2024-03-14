@@ -18,7 +18,7 @@ You are expected to
 ● Upload your code on GitHub and email repo link to #########
 ```
 # 3) Files
-process.md
+documentation.md
 > MD file explaining the whole process of the project
 > 
 noyoto.ipynb 
