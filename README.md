@@ -18,6 +18,9 @@ You are expected to
 ● Upload your code on GitHub and email repo link to #########
 ```
 # 3) Files
+documentation.md
+> MD file explaining the whole process of the project
+>
 noyoto.ipynb 
 > Contains the whole process of data selection, data exploration, image augmentation, benchmark model training, final model training, model evaluation, model inference, exporting the model.
 >
