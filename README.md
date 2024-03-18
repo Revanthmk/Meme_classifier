@@ -62,6 +62,8 @@ Note that the dependencies mentioned here and in the requirements.txt file are o
 # 6) Model Performance
 ![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/0ad9ff86-6592-44f4-acb2-df724508cfbb)
 ![image](https://github.com/Revanthmk/Noyoto_meme_classifier/assets/38763740/ca7a95da-1248-493e-b196-bd024806834c)
+# 7) Documentation
+For more information about the process followed in training the model, refer to the [documentation](https://github.com/Revanthmk/Meme_classifier/blob/main/documentation.md)
 
 
 
